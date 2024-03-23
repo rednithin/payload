@@ -1,5 +1,3 @@
-import type { Config } from 'payload/config'
-
 import type { PluginConfig } from './types'
 
 import { generateSubmissionCollection } from './collections/FormSubmissions'
@@ -10,7 +8,7 @@ export { getPaymentTotal } from './utilities/getPaymentTotal'
 
 const FormBuilder =
   (incomingFormConfig: PluginConfig) =>
-  (config: Config): Config => {
+  (config: any): any => {
     const formConfig: PluginConfig = {
       ...incomingFormConfig,
       fields: {
